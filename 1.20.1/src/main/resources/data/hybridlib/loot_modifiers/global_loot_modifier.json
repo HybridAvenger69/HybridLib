@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "entries": [
+    "hybridlib:deepslate_tech_ore",
+    "hybridlib:tech_ore"
+  ]
+}
