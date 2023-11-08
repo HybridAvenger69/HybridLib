@@ -4,5 +4,8 @@
   "item.hybridlib.tech_ingot": "Tech Ingot",
   "item.hybridlib.euclase_gem": "Euclase Gem",
   "item.hybridlib.raw_tech": "Raw Tech",
-  "block.hybridlib.nether_star_block": "Nether Star Block"
+  "item.hybridlib.double_netherite_ingot": "Double Netherite Ingot",
+  "block.hybridlib.nether_star_block": "Nether Star Block",
+  "block.hybridlib.tech_ore": "Tech Ore",
+  "block.hybridlib.deepslate_tech_ore": "Deepslate Tech Ore"
 }

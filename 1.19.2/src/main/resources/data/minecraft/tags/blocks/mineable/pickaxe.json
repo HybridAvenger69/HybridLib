@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "hybridlib:tech_ore",
+    "hybridlib:deepslate_tech_ore",
+    "hybridlib:nether_star_block"
+
+  ]
+}

@@ -2,6 +2,8 @@ package com.hybridavenger69.hybridlib;
 
 import com.hybridavenger69.hybridlib.main.BlockRegistry;
 import com.hybridavenger69.hybridlib.main.ItemRegistry;
+import com.hybridavenger69.hybridlib.main.world.feature.ModConfiguredFeatures;
+import com.hybridavenger69.hybridlib.main.world.feature.ModPlacedFeatures;
 import com.mojang.logging.LogUtils;
 
 import net.minecraftforge.common.MinecraftForge;
@@ -19,11 +21,10 @@ import org.slf4j.Logger;
 
 
 
-// The value here should match an entry in the META-INF/mods.toml file
-@Mod(HybridLib.MOD_ID)
+// The value here should
+//match an entry in the META-INF/mods.toml file
+@Mod(HybridIDS.MOD_ID)
 public class HybridLib {
-
-    public static final String MOD_ID = "hybridlib";
 
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
@@ -33,6 +34,9 @@ public class HybridLib {
 
        ItemRegistry.register(modEventBus);
        BlockRegistry.register(modEventBus);
+
+        ModConfiguredFeatures.CONFIGURED_FEATURES.register(modEventBus);
+        ModPlacedFeatures.PLACED_FEATURES.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -44,7 +48,7 @@ public class HybridLib {
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    @Mod.EventBusSubscriber(modid = HybridIDS.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
